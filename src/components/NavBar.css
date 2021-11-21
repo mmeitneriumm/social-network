@@ -1,4 +1,21 @@
 .nav {
+  display: flex;
+  flex-direction: column;
   grid-area: n;
-  background-color: skyblue;
+  background-color: yellow;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.my-profile,
+.my-connect,
+.my-world-gallery,
+.my-music,
+.my-settings {
+  margin: 10px;
 }
