@@ -10,19 +10,19 @@ const NavBar = () => {
     <div className={styles.nav}>
       <div className={`${styles.item} ${styles.active}`}>
         <FaUserAlt />
-        <a href="#">My profile</a>
+        <a href="/profile">My profile</a>
       </div>
       <div className={styles.item}>
         <FaComments />
-        <a href="#">Connect</a>
+        <a href="/dialogs">My dialogs</a>
       </div>
       <div className={styles.item}>
         <FaPhotoVideo />
-        <a href="#">World gallery</a>
+        <a href="/news">My news</a>
       </div>
       <div className={styles.item}>
         <FaMusic />
-        <a href="#">Music (why not?)</a>
+        <a href="/music">My music</a>
       </div>
       <div className={styles.item}>
         <FaSlidersH />

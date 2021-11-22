@@ -1,5 +1,7 @@
 const Dialogs = () => {
-  return <div>Dialogs</div>;
+  return (
+    <div>Dialogs ваылволллллллллллллллллллллллллллллллллллллллллллллллд</div>
+  );
 };
 
 export default Dialogs;
