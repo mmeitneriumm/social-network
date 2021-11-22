@@ -8,7 +8,7 @@ import { FaSlidersH } from "react-icons/fa";
 const NavBar = () => {
   return (
     <div className={styles.nav}>
-      <div className={styles.item}>
+      <div className={`${styles.item} ${styles.active}`}>
         <FaUserAlt />
         <a href="#">My profile</a>
       </div>
