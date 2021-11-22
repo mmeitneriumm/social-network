@@ -1,10 +1,10 @@
 import logo from "../img/image.png";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
     <header>
-      <img src={logo} alt="лого" className="logo" />
+      <img src={logo} alt="лого" className={styles.logo} />
     </header>
   );
 };

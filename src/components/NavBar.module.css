@@ -12,10 +12,6 @@ a {
   font-weight: 600;
 }
 
-.my-profile,
-.my-connect,
-.my-world-gallery,
-.my-music,
-.my-settings {
+.item {
   margin: 10px;
 }
