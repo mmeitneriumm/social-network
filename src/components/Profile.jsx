@@ -1,7 +1,7 @@
-import "./MainContent.css";
-import background from "./img/bg.jpg";
+import "./Profile.css";
+import background from "../img/bg.jpg";
 
-const MainContent = () => {
+const Profile = () => {
   return (
     <div className="content">
       <div>
@@ -17,4 +17,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Profile;

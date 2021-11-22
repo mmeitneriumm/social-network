@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import MainContent from "./components/MainContent";
+import Header from "./components/Header.jsx";
+import NavBar from "./components/NavBar.jsx";
+import Profile from "./components/Profile.jsx";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <div className="app-wrapper">
         <Header />
         <NavBar />
-        <MainContent />
+        <Profile />
       </div>
     </div>
   );
