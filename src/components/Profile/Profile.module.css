@@ -5,10 +5,26 @@ img {
 
 .profileInfo {
   display: flex;
+  justify-content: center;
+  justify-items: flex-start;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/bg.jpg");
+}
+
+.name {
+  font-size: 50pt;
+  font-weight: 700;
+}
+.description {
+  text-align: center;
+  color: #ffc400;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 50px;
 }
 
 .profileInfo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }

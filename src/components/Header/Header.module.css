@@ -1,4 +1,6 @@
 header {
+  display: flex;
+  justify-content: flex-start;
   grid-area: h;
   background-color: black;
 }

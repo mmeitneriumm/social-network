@@ -2,18 +2,22 @@
   display: flex;
   flex-direction: column;
   grid-area: n;
-  background-color: yellow;
+  background-color: #1d1d1d;
+}
+
+.item {
+  justify-content: flex-end;
 }
 
 .item a,
 .item {
   margin: 10px;
   text-decoration: none;
-  color: black;
+  color: white;
   margin-left: 10px;
   font-weight: 600;
 }
 
 .item .active {
-  color: red !important;
+  color: #ffc400;
 }
