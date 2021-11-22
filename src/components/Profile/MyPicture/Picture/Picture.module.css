@@ -1,0 +1,20 @@
+.item {
+  color: white;
+  background-color: chocolate;
+}
+
+.item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.user {
+  display: flex;
+}
+
+p {
+  padding-left: 10px;
+  margin: 3px;
+  font-size: 20px;
+}

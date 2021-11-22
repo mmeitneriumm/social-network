@@ -1,3 +1,4 @@
+import MyPicture from "./MyPicture/MyPicture";
 import styles from "./Profile.module.css";
 import background from "../img/bg.jpg";
 
@@ -7,15 +8,19 @@ const Profile = () => {
       <div>
         <img src={background} alt="background" />
       </div>
-      <div>ava + description</div>
-      <div>
-        MyPicture
-        <div>New picture</div>
-        <div className={styles.pics}>
-          <div className={styles.item}>pic 1</div>
-          <div className={styles.item}>pic 2</div>
+      <div className={styles.profileInfo}>
+        <img
+          src="https://sun9-10.userapi.com/impg/Y98ahL09qw8fvGaCUPCJ1taIkWcaGWewN7jIgw/Tsso-6hRbXs.jpg?size=564x564&quality=96&sign=16ae910f5e035029be70272137a4c5d6&type=album"
+          alt=""
+        />
+
+        <div className={styles.description}>
+          <h4>Maria Merkushova</h4>
+          <h4>21 y.o</h4>
+          <h4>Frontend-developer</h4>
         </div>
       </div>
+      <MyPicture />
     </div>
   );
 };
