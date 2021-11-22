@@ -5,17 +5,15 @@
   background-color: yellow;
 }
 
-a {
+.item a,
+.item {
+  margin: 10px;
   text-decoration: none;
   color: black;
   margin-left: 10px;
   font-weight: 600;
 }
 
-.item {
-  margin: 10px;
-}
-
-.active {
+.item .active {
   color: red !important;
 }

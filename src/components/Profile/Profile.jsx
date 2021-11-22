@@ -1,4 +1,4 @@
-import MyPicture from "./MyPicture/MyPicture";
+import MyPosts from "./MyPosts/MyPosts";
 import styles from "./Profile.module.css";
 import background from "../img/bg.jpg";
 
@@ -20,7 +20,7 @@ const Profile = () => {
           <h4>Frontend-developer</h4>
         </div>
       </div>
-      <MyPicture />
+      <MyPosts />
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import styles from "./Picture.module.css";
+import styles from "./Post.module.css";
 
-const Picture = (props) => {
+const Post = (props) => {
   return (
     <div className={styles.item}>
       <div className={styles.user}>
@@ -15,4 +15,4 @@ const Picture = (props) => {
   );
 };
 
-export default Picture;
+export default Post;

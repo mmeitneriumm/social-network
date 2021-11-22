@@ -4,25 +4,46 @@ import { FaComments } from "react-icons/fa";
 import { FaPhotoVideo } from "react-icons/fa";
 import { FaMusic } from "react-icons/fa";
 import { FaSlidersH } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className={styles.nav}>
-      <div className={`${styles.item} ${styles.active}`}>
+      <div className={styles.item}>
         <FaUserAlt />
-        <a href="/profile">My profile</a>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        >
+          My profile
+        </NavLink>
       </div>
       <div className={styles.item}>
         <FaComments />
-        <a href="/dialogs">My dialogs</a>
+        <NavLink
+          to="/dialogs"
+          className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        >
+          My dialogs
+        </NavLink>
       </div>
       <div className={styles.item}>
         <FaPhotoVideo />
-        <a href="/news">My news</a>
+        <NavLink
+          to="/news"
+          className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        >
+          My news
+        </NavLink>
       </div>
       <div className={styles.item}>
         <FaMusic />
-        <a href="/music">My music</a>
+        <NavLink
+          to="/music"
+          className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        >
+          My music
+        </NavLink>
       </div>
       <div className={styles.item}>
         <FaSlidersH />
