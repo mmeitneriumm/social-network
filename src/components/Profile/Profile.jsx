@@ -4,7 +4,7 @@ import background from "../img/bg.jpg";
 
 const Profile = () => {
   return (
-    <div className={styles.content}>
+    <div>
       <div>
         <img src={background} alt="background" />
       </div>
