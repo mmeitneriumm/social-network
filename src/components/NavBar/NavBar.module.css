@@ -3,6 +3,7 @@
   flex-direction: column;
   grid-area: n;
   background-color: #1d1d1d;
+  outline: 2px solid black;
 }
 
 .item {

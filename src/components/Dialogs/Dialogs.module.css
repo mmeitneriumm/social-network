@@ -1,0 +1,52 @@
+.messanger {
+  display: grid;
+  grid-template-columns: 10fr 3fr;
+  outline: 2px solid black;
+}
+
+p {
+  color: white;
+  text-align: center;
+}
+
+.dialogs {
+  padding: 20px;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.dialogsItem,
+.dialogsItemActive {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+.dialogsItemActive {
+  background-color: #ffffff !important;
+  outline: 5px solid yellow;
+  font-weight: 700;
+}
+
+.messages {
+  padding: 20px;
+}
+
+.messageItemMe,
+.messageItemYou {
+  margin: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.messageItemMe {
+  text-align: right;
+}
+
+.messageItemYou {
+  text-align: left;
+}
