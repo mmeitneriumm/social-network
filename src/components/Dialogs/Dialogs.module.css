@@ -9,6 +9,10 @@ p {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .dialogs {
   padding: 20px;
   background-color: black;
