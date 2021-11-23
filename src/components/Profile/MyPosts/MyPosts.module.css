@@ -1,6 +1,6 @@
 .myPosts {
-  margin: 20px;
   background-color: tomato;
+  outline: 2px solid black;
 }
 
 .myPosts h1 {

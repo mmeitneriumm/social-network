@@ -38,19 +38,10 @@ a {
   padding: 20px;
 }
 
-.messageItemMe,
-.messageItemYou {
+.messageItem {
   margin: 20px;
   color: white;
   background-color: black;
   border-radius: 20px;
   padding: 10px;
-}
-
-.messageItemMe {
-  text-align: right;
-}
-
-.messageItemYou {
-  text-align: left;
 }

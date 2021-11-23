@@ -1,21 +1,17 @@
-img {
-  width: 1265px;
-  height: 300px;
-}
-
 .profileInfo {
   display: flex;
   justify-content: center;
   justify-items: flex-start;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/bg.jpg");
+    url("../../img/bg.jpg");
+  outline: 2px solid black;
 }
 
 .name {
   font-size: 50pt;
   font-weight: 700;
 }
-.description {
+.profileInfo_description {
   text-align: center;
   color: #ffc400;
   border-radius: 20px;
