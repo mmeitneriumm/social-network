@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 10fr 3fr;
   outline: 2px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/bgDialogs.jpg");
 }
 
 p {
