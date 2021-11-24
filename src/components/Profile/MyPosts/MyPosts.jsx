@@ -7,15 +7,14 @@ const MyPosts = () => {
     { id: 2, post: "Здравствуйте, я адыхаю" },
     { id: 3, post: "Хочу в Uplab" },
   ];
+  let postElement = postsData.map((post) => <Post message={post.post} />);
   return (
     <div className={styles.myPosts}>
       <p>My posts</p>
       <div>New post</div>
       <textarea cols="30" rows="2"></textarea>
       <button>Add post</button>
-      <Post message={postsData[0].post} />
-      <Post message={postsData[1].post} />
-      <Post message={postsData[2].post} />
+      {postElement}
     </div>
   );
 };
