@@ -3,28 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
-let posts = [
-  { id: 1, post: "Дратути, теперь и у меня своя соцсеть" },
-  { id: 2, post: "Здравствуйте, я адыхаю" },
-  { id: 3, post: "Хочу в Uplab" },
-];
-let dialogs = [
-  { id: 1, name: "Хаски Мен" },
-  { id: 2, name: "Никита Кальян" },
-  { id: 3, name: "Влад Машина" },
-];
-
-let messages = [
-  { id: 1, message: "Есть чай через руки?" },
-  { id: 2, message: "Пить морковь без носков?" },
-  { id: 3, message: "Что" },
-  { id: 4, message: "Что?" },
-];
+import state from "./redux/state";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts} dialogs={dialogs} messages={messages} />
+    <App
+      posts={state.profilePage.posts}
+      dialogs={state.dialogsPage.dialogs}
+      messages={state.dialogsPage.messages}
+    />
   </React.StrictMode>,
   document.getElementById("root")
 );
