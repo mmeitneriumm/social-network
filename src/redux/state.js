@@ -23,9 +23,17 @@ let state = {
 
 export let addPost = (postMessage) => {
   let newPost = {
-    id: 5,
+    id: 4,
     post: postMessage,
   };
   state.profilePage.posts.push(newPost);
+};
+
+export let addMessage = (messageText) => {
+  let newMessage = {
+    id: 5,
+    message: messageText,
+  };
+  state.dialogsPage.messages.push(newMessage);
 };
 export default state;

@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import state from "./redux/state";
 import { addPost } from "./redux/state";
+import { addMessage } from "./redux/state";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
       dialogs={state.dialogsPage.dialogs}
       messages={state.dialogsPage.messages}
       addPost={addPost}
+      addMessage={addMessage}
     />
   </React.StrictMode>,
   document.getElementById("root")
