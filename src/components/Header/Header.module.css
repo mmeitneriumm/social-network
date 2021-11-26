@@ -3,6 +3,7 @@ header {
   justify-content: flex-start;
   grid-area: h;
   background-color: black;
+  outline: 2px solid black;
 }
 
 .logo {

@@ -10,12 +10,25 @@ const MyPosts = (props) => {
     props.addPost(text);
   };
   return (
-    <div className={styles.myPosts}>
-      <p>My posts</p>
-      <div>New post</div>
-      <textarea cols="30" rows="2" ref={newPostElement}></textarea>
-      <button onClick={addPost}>Add post</button>
-      {postElement}
+    <div className={styles.durovVerniStenu}>
+      <div className={styles.myPosts}>
+        <p>My posts</p>
+        <div className={styles.newPost}>
+          <textarea
+            cols="30"
+            rows="2"
+            ref={newPostElement}
+            placeholder="New post..."
+          ></textarea>
+          <button onClick={addPost} className={styles.button}>
+            Add post
+          </button>
+        </div>
+        {postElement}
+      </div>
+      <div className={styles.friends}>
+        <p>My Friends</p>
+      </div>
     </div>
   );
 };

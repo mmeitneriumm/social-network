@@ -1,6 +1,16 @@
 .item {
   color: white;
-  background-color: chocolate;
+  background-color: rgba(0, 0, 0, 0.795);
+  padding: 10px;
+  padding-left: 60px;
+  margin: 20px;
+  border-radius: 50px;
+}
+
+.item:hover {
+  box-shadow: 0 12px 16px 0 rgba(21, 255, 0, 0.623),
+    0 17px 50px 0 rgb(214, 211, 0);
+  background-color: rgb(3, 88, 0);
 }
 
 .item img {
@@ -11,10 +21,11 @@
 
 .user {
   display: flex;
+  align-items: center;
 }
 
 p {
-  padding-left: 10px;
+  padding: 10px !important;
   margin: 3px;
   font-size: 20px;
 }

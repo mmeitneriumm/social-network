@@ -23,13 +23,20 @@ const Dialogs = (props) => {
       <div className={styles.messages}>
         {messagesElement}
         <div className={styles.addPost}>
-          <textarea ref={newMessageElement} cols="30" rows="2"></textarea>
-          <button onClick={addMessage}>Send message</button>
+          <textarea
+            ref={newMessageElement}
+            cols="30"
+            rows="2"
+            placeholder="Your message..."
+          ></textarea>
+          <button onClick={addMessage} className={styles.button}>
+            Send message
+          </button>
         </div>
       </div>
 
       <div className={styles.dialogs}>
-        <p>Список диалогов:</p>
+        <p>Dialogs list:</p>
         {dialogsElement}
       </div>
     </div>

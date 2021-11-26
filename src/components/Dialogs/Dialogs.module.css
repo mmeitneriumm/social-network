@@ -46,4 +46,46 @@ a {
   background-color: black;
   border-radius: 20px;
   padding: 10px;
+  word-wrap: break-word;
+}
+
+.button {
+  background-color: #4caf50;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(21, 255, 0, 0.623),
+    0 17px 50px 0 rgb(214, 211, 0);
+  background-color: yellowgreen;
+}
+
+textarea {
+  outline: none;
+  -moz-appearance: none;
+  border: 1px solid #999;
+  resize: none;
+  width: 70%;
+  height: 40px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.addPost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px;
 }
