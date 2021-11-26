@@ -1,3 +1,5 @@
+import { rerenderEntireThree } from "../render";
+
 let state = {
   profilePage: {
     posts: [
@@ -27,6 +29,7 @@ export let addPost = (postMessage) => {
     post: postMessage,
   };
   state.profilePage.posts.push(newPost);
+  rerenderEntireThree(state);
 };
 
 export let addMessage = (messageText) => {
@@ -35,5 +38,6 @@ export let addMessage = (messageText) => {
     message: messageText,
   };
   state.dialogsPage.messages.push(newMessage);
+  rerenderEntireThree(state);
 };
 export default state;
