@@ -3,7 +3,6 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaComments } from "react-icons/fa";
 import { FaPhotoVideo } from "react-icons/fa";
 import { FaMusic } from "react-icons/fa";
-import { FaSlidersH } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -44,10 +43,6 @@ const NavBar = () => {
         >
           My music
         </NavLink>
-      </div>
-      <div className={styles.item}>
-        <FaSlidersH />
-        <a href="#">Settings</a>
       </div>
     </div>
   );
