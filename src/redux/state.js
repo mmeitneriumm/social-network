@@ -7,6 +7,7 @@ let state = {
       { id: 2, post: "Здравствуйте, я адыхаю" },
       { id: 3, post: "Хочу в Uplab" },
     ],
+    newPostText: "Ну ты можешь написать шутку",
   },
   dialogsPage: {
     dialogs: [
@@ -23,12 +24,13 @@ let state = {
   },
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
     id: 4,
-    post: postMessage,
+    post: state.profilePage.newPostText,
   };
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = " ";
   rerenderEntireThree(state);
 };
 
@@ -38,6 +40,11 @@ export let addMessage = (messageText) => {
     message: messageText,
   };
   state.dialogsPage.messages.push(newMessage);
+
+  rerenderEntireThree(state);
+};
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireThree(state);
 };
 export default state;

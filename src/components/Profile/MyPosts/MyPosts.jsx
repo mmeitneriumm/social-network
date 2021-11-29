@@ -4,10 +4,16 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
   let postElement = props.posts.map((p) => <Post message={p.post} />);
+
   let newPostElement = React.createRef();
+
   let addPost = () => {
+    props.addPost();
+  };
+
+  let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
+    props.updateNewPostText(text);
   };
   return (
     <div className={styles.durovVerniStenu}>
@@ -19,7 +25,9 @@ const MyPosts = (props) => {
             rows="2"
             ref={newPostElement}
             placeholder="New post..."
-          ></textarea>
+            value={props.newPostText}
+            onChange={onPostChange}
+          />
           <button onClick={addPost} className={styles.button}>
             Add post
           </button>
