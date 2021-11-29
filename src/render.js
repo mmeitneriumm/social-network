@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { addPost, addMessage, updateNewPostText } from "./redux/state";
+import {
+  addPost,
+  addMessage,
+  updateNewPostText,
+  updateNewMessageText,
+} from "./redux/state";
 
 export let rerenderEntireThree = (state) => {
   ReactDOM.render(
@@ -14,6 +19,8 @@ export let rerenderEntireThree = (state) => {
         addPost={addPost}
         addMessage={addMessage}
         updateNewPostText={updateNewPostText}
+        updateNewMessageText={updateNewMessageText}
+        newMessageText={state.dialogsPage.newMessageText}
       />
     </React.StrictMode>,
     document.getElementById("root")

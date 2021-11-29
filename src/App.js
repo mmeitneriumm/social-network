@@ -33,6 +33,8 @@ function App(props) {
                   dialogs={props.dialogs}
                   messages={props.messages}
                   addMessage={props.addMessage}
+                  updateNewMessageText={props.updateNewMessageText}
+                  newMessageText={props.newMessageText}
                 />
               }
             />

@@ -13,9 +13,15 @@ const Dialogs = (props) => {
   ));
 
   let newMessageElement = React.createRef();
+
   let addMessage = () => {
     let text = newMessageElement.current.value;
     props.addMessage(text);
+  };
+
+  let onMessageChange = () => {
+    let text = newMessageElement.current.value;
+    props.updateNewPostText(text);
   };
 
   return (
@@ -28,6 +34,8 @@ const Dialogs = (props) => {
             cols="30"
             rows="2"
             placeholder="Your message..."
+            value={props.newMessageText}
+            onChange={onMessageChange}
           ></textarea>
           <button onClick={addMessage} className={styles.button}>
             Send message

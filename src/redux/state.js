@@ -21,6 +21,7 @@ let state = {
       { id: 3, message: "Что" },
       { id: 4, message: "Что?" },
     ],
+    newMessageText: "Привет, как дела?",
   },
 };
 
@@ -34,17 +35,21 @@ export let addPost = () => {
   rerenderEntireThree(state);
 };
 
-export let addMessage = (messageText) => {
+export let addMessage = () => {
   let newMessage = {
     id: 5,
-    message: messageText,
+    message: state.dialogsPage.newMessageText,
   };
   state.dialogsPage.messages.push(newMessage);
-
+  state.dialogsPage.newMessageText = "";
   rerenderEntireThree(state);
 };
 export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
+  rerenderEntireThree(state);
+};
+export let updateNewMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
   rerenderEntireThree(state);
 };
 export default state;
