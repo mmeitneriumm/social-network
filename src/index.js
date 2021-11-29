@@ -11,7 +11,7 @@ import {
   subscribe,
 } from "./redux/state";
 
-let rerenderEntireThree = () => {
+let rerenderEntireThree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
       <App
