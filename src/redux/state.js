@@ -29,6 +29,7 @@ let store = {
   _callSubscriber() {
     console.log("state");
   },
+
   addPost() {
     let newPost = {
       id: 4,
@@ -55,6 +56,7 @@ let store = {
     this._state.dialogsPage.newMessageText = newText;
     this._callSubscriber(this._state);
   },
+
   subscribe(observer) {
     this._callSubscriber = observer;
   },

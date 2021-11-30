@@ -14,8 +14,8 @@ let rerenderEntireThree = (state) => {
         addPost={store.addPost.bind(store)}
         addMessage={store.addMessage.bind(store)}
         updateNewPostText={store.updateNewPostText.bind(store)}
-        newPostText={store.getState().profilePage.newPostText}
         updateNewMessageText={store.updateNewMessageText.bind(store)}
+        newPostText={store.getState().profilePage.newPostText}
         newMessageText={store.getState().dialogsPage.newMessageText}
       />
     </React.StrictMode>,
