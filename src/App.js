@@ -21,8 +21,7 @@ function App(props) {
                 <Profile
                   newPostText={props.newPostText}
                   posts={props.posts}
-                  addPost={props.addPost}
-                  updateNewPostText={props.updateNewPostText}
+                  dispatch={props.dispatch}
                 />
               }
             />
@@ -32,8 +31,7 @@ function App(props) {
                 <Dialogs
                   dialogs={props.dialogs}
                   messages={props.messages}
-                  addMessage={props.addMessage}
-                  updateNewMessageText={props.updateNewMessageText}
+                  dispatch={props.dispatch}
                   newMessageText={props.newMessageText}
                 />
               }
