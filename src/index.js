@@ -3,18 +3,14 @@ import store from "./redux/redux-store";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import StoreContext from "./StoreContext";
 
 let rerenderEntireThree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App
-        posts={store.getState().profilePage.posts}
-        dialogs={store.getState().dialogsPage.dialogs}
-        messages={store.getState().dialogsPage.messages}
-        dispatch={store.dispatch.bind(store)}
-        newPostText={store.getState().profilePage.newPostText}
-        newMessageText={store.getState().dialogsPage.newMessageText}
-      />
+      <StoreContext.Provider value={store}>
+        <App />
+      </StoreContext.Provider>
     </React.StrictMode>,
     document.getElementById("root")
   );
