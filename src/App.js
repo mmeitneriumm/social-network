@@ -6,6 +6,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 function App(props) {
   return (
@@ -28,7 +29,7 @@ function App(props) {
             <Route
               path="/dialogs"
               element={
-                <Dialogs
+                <DialogsContainer
                   dialogs={props.dialogs}
                   messages={props.messages}
                   dispatch={props.dispatch}

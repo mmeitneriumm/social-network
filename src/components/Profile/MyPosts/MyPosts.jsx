@@ -11,14 +11,15 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+  let onAddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch(updateNewPostActionCreator(text));
+    props.updateNewPostText(text);
   };
+
   return (
     <div className={styles.durovVerniStenu}>
       <div className={styles.myPosts}>
@@ -32,7 +33,7 @@ const MyPosts = (props) => {
             value={props.newPostText}
             onChange={onPostChange}
           />
-          <button onClick={addPost} className={styles.button}>
+          <button onClick={onAddPost} className={styles.button}>
             Add post
           </button>
         </div>
