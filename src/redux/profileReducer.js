@@ -11,17 +11,19 @@ let initialState = {
 };
 
 const profileReducer = (state = initialState, action) => {
+  let copyState = { ...state };
   if (action.type === ADD_POST) {
     let newPost = {
       id: 4,
       post: state.newPostText,
     };
-    state.posts.push(newPost);
-    state.newPostText = " ";
+    copyState.posts = [...state.posts];
+    copyState.posts.push(newPost);
+    copyState.newPostText = " ";
   } else if (action.type === UPDATE_NEW_POST_TEXT) {
-    state.newPostText = action.newText;
+    copyState.newPostText = action.newText;
   }
-  return state;
+  return copyState;
 };
 
 export default profileReducer;
