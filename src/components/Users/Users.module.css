@@ -1,5 +1,74 @@
+.users {
+  border: 2px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.5)),
+    url("../img/bgUsers.jpg");
+  outline: 2px solid black;
+}
+
+.usersItem {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  background-color: black;
+  border-radius: 40px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.avaAndName {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 .photo img {
   width: 70px;
   height: 70px;
+  border: 1px solid white;
   border-radius: 50%;
+}
+
+.fullName {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.button {
+  background-color: #4caf50;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(21, 255, 0, 0.623),
+    0 17px 50px 0 rgb(214, 211, 0);
+  background-color: yellowgreen;
+}
+
+.status {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
 }

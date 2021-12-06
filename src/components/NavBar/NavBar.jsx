@@ -18,6 +18,15 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div className={styles.item}>
+        <FaUserAlt />
+        <NavLink
+          to="/users"
+          className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        >
+          My users :3
+        </NavLink>
+      </div>
+      <div className={styles.item}>
         <FaComments />
         <NavLink
           to="/dialogs"

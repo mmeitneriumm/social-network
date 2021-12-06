@@ -1,16 +1,27 @@
 import styles from "./Users.module.css";
+import { FaMapMarker } from "react-icons/fa";
 
 let Users = (props) => {
   return (
-    <div>
+    <div className={styles.users}>
       {props.users.map((u) => (
-        <div key={u.id}>
-          <div className={styles.photo}>
-            <img src={u.photoUrl} />
+        <div key={u.id} className={styles.usersItem}>
+          <div className={styles.avaAndName}>
+            <div className={styles.photo}>
+              <img src={u.photoUrl} alt="ava" />
+            </div>
+            <div className={styles.fullName}>{u.fullName}</div>
           </div>
-          <div>
+          <div className={styles.status}>"{u.status}"</div>
+          <div className={styles.location}>
+            <FaMapMarker />
+            <div>{u.location.city}, </div>
+            <div>{u.location.country}</div>
+          </div>
+          <div className={styles.buttonBlock}>
             {u.followed ? (
               <button
+                className={styles.button}
                 onClick={() => {
                   props.unfollow(u.id);
                 }}
@@ -19,6 +30,7 @@ let Users = (props) => {
               </button>
             ) : (
               <button
+                className={styles.button}
                 onClick={() => {
                   props.follow(u.id);
                 }}
@@ -27,10 +39,6 @@ let Users = (props) => {
               </button>
             )}
           </div>
-          <div>{u.fullName}</div>
-          <div>"{u.status}"</div>
-          <div>{u.location.city}</div>
-          <div>{u.location.country}</div>
         </div>
       ))}
     </div>
