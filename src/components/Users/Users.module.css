@@ -5,6 +5,16 @@
   outline: 2px solid black;
 }
 
+.pagination {
+  color: white;
+  font-weight: 300;
+}
+
+.selectPage {
+  color: white;
+  font-weight: 700;
+}
+
 .usersItem {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr;
