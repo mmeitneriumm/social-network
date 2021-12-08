@@ -32,8 +32,26 @@ class Users extends React.Component {
       this.props.totalUsersCount / this.props.pageSize
     );
     let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-      pages.push(i);
+    if (pagesCount > 10) {
+      if (this.props.currentPage > 5) {
+        for (
+          let i = this.props.currentPage - 4;
+          i <= this.props.currentPage + 5;
+          i++
+        ) {
+          pages.push(i);
+          if (i == pagesCount) break;
+        }
+      } else {
+        for (let i = 1; i <= 10; i++) {
+          pages.push(i);
+          if (i == pagesCount) break;
+        }
+      }
+    } else {
+      for (let i = 1; i <= pagesCount; i++) {
+        pages.push(i);
+      }
     }
     return (
       <div className={styles.users}>

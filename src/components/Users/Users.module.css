@@ -8,10 +8,12 @@
 .pagination {
   color: white;
   font-weight: 300;
+  display: flex;
+  justify-content: center;
 }
 
 .selectPage {
-  color: white;
+  color: yellow;
   font-weight: 700;
 }
 
