@@ -63,7 +63,7 @@ let Users = (props) => {
               <button
                 className={styles.button}
                 onClick={() => {
-                  props.unfollow(u.id);
+                  props.unFollow(u.id);
                 }}
               >
                 Unfollow
