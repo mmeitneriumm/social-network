@@ -11,7 +11,7 @@ const NavBar = () => {
       <div className={styles.item}>
         <FaUserAlt />
         <NavLink
-          to="/profile"
+          to="/profile/"
           className={({ isActive }) => (isActive ? `${styles.active}` : "")}
         >
           My profile
@@ -29,7 +29,7 @@ const NavBar = () => {
       <div className={styles.item}>
         <FaComments />
         <NavLink
-          to="/dialogs"
+          to="/dialogs/"
           className={({ isActive }) => (isActive ? `${styles.active}` : "")}
         >
           My dialogs

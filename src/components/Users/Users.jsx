@@ -1,6 +1,7 @@
 import styles from "./Users.module.css";
 import { FaMapMarker } from "react-icons/fa";
 import user from "./../img/user.jpg";
+import { NavLink } from "react-router-dom";
 
 let Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -45,10 +46,12 @@ let Users = (props) => {
         <div key={u.id} className={styles.usersItem}>
           <div className={styles.avaAndName}>
             <div className={styles.photo}>
-              <img
-                src={u.photos.small != null ? u.photos.small : user}
-                alt="ava"
-              />
+              <NavLink to={"/profile/" + u.id}>
+                <img
+                  src={u.photos.small != null ? u.photos.small : user}
+                  alt="ava"
+                />
+              </NavLink>
             </div>
             <div className={styles.fullName}>{u.name}</div>
           </div>
