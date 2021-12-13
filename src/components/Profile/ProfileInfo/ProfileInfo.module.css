@@ -7,6 +7,11 @@
   outline: 2px solid black;
 }
 
+.contacts p {
+  font-size: 10px;
+  text-align: left;
+}
+
 .name {
   font-size: 50pt;
   font-weight: 700;
