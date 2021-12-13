@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
 import Profile from "./Profile";
+import { setUsersProfile } from "../../redux/profileReducer";
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
@@ -20,4 +21,4 @@ let mapStateToProps = (state) => ({
   a: 13,
 });
 
-export default connect(mapStateToProps)(ProfileContainer);
+export default connect(mapStateToProps, { setUsersProfile })(ProfileContainer);

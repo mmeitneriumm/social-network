@@ -14,7 +14,7 @@ function App() {
       <div className="app-wrapper">
         <Header />
         <NavBar />
-        <div class="app-wrapper-content">
+        <div className="app-wrapper-content">
           <Routes>
             <Route path="/profile/*" element={<ProfileContainer />} />
             <Route path="/users" element={<UsersContainer />} />

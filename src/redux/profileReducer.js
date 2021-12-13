@@ -1,5 +1,6 @@
 let ADD_POST = "ADD-POST";
 let UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+let SET_USERS_PROFILE = "SET-USERS-PROFILE";
 
 let initialState = {
   posts: [
@@ -8,22 +9,37 @@ let initialState = {
     { id: 3, post: "Хочу в Uplab" },
   ],
   newPostText: "Ну ты можешь написать шутку",
+  profile: null,
 };
 
 const profileReducer = (state = initialState, action) => {
-  let copyState = { ...state };
-  if (action.type === ADD_POST) {
-    let newPost = {
-      id: 4,
-      post: state.newPostText,
-    };
-    copyState.posts = [...state.posts];
-    copyState.posts.push(newPost);
-    copyState.newPostText = " ";
-  } else if (action.type === UPDATE_NEW_POST_TEXT) {
-    copyState.newPostText = action.newText;
+  switch (action.type) {
+    case ADD_POST: {
+      let newPost = {
+        id: 5,
+        post: state.newPostText,
+      };
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: " ",
+      };
+    }
+    case UPDATE_NEW_POST_TEXT: {
+      return {
+        ...state,
+        newPostText: action.newText,
+      };
+    }
+    case SET_USERS_PROFILE: {
+      return {
+        ...state,
+        profile: action.profile,
+      };
+    }
+    default:
+      return state;
   }
-  return copyState;
 };
 
 export default profileReducer;
@@ -38,5 +54,12 @@ export const updateNewPostActionCreator = (text) => {
   return {
     type: UPDATE_NEW_POST_TEXT,
     newText: text,
+  };
+};
+
+export const setUsersProfile = (profile) => {
+  return {
+    type: SET_USERS_PROFILE,
+    profile,
   };
 };
