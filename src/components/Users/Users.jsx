@@ -2,6 +2,7 @@ import styles from "./Users.module.css";
 import { FaMapMarker } from "react-icons/fa";
 import user from "./../img/user.jpg";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 let Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -66,7 +67,21 @@ let Users = (props) => {
               <button
                 className={styles.button}
                 onClick={() => {
-                  props.unFollow(u.id);
+                  axios
+                    .delete(
+                      `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                      {
+                        withCredentials: true,
+                        headers: {
+                          "API-KEY": "3d85b6b7-37ed-42cb-9a02-6880255338d0",
+                        },
+                      }
+                    )
+                    .then((response) => {
+                      if (response.data.resultCode === 0) {
+                        props.unFollow(u.id);
+                      }
+                    });
                 }}
               >
                 Unfollow
@@ -75,10 +90,26 @@ let Users = (props) => {
               <button
                 className={styles.button}
                 onClick={() => {
-                  props.follow(u.id);
+                  axios
+                    .post(
+                      `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                      {},
+                      {
+                        withCredentials: true,
+                        headers: {
+                          "API-KEY": "3d85b6b7-37ed-42cb-9a02-6880255338d0",
+                        },
+                      }
+                    )
+                    .then((response) => {
+                      if (response.data.resultCode === 0) {
+                        props.follow(u.id);
+                      }
+                    });
                 }}
               >
-                Follow
+                {" "}
+                Follow{" "}
               </button>
             )}
           </div>
