@@ -1,6 +1,6 @@
 header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   grid-area: h;
   background-color: black;
   outline: 2px solid black;
@@ -10,4 +10,8 @@ header {
   width: 150px;
   height: 30px;
   margin: 10px;
+}
+
+.login p {
+  color: white;
 }
