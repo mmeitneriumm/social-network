@@ -67,8 +67,8 @@ let Users = (props) => {
               <button
                 className={styles.button}
                 onClick={() => {
-                  deleteUnfollow(u.id).then((response) => {
-                    if (response.data.resultCode === 0) {
+                  deleteUnfollow(u.id).then((data) => {
+                    if (data.resultCode === 0) {
                       props.unFollow(u.id);
                     }
                   });
@@ -80,8 +80,8 @@ let Users = (props) => {
               <button
                 className={styles.button}
                 onClick={() => {
-                  postFollow(u.id).then((response) => {
-                    if (response.data.resultCode === 0) {
+                  postFollow(u.id).then((data) => {
+                    if (data.resultCode === 0) {
                       props.follow(u.id);
                     }
                   });

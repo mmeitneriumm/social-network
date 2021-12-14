@@ -6,9 +6,9 @@ import Header from "./Header";
 
 class HeaderContainer extends React.Component {
   componentDidMount() {
-    getAuth().then((response) => {
-      if (response.data.resultCode === 0) {
-        let { id, email, login } = response.data.data;
+    getAuth().then((data) => {
+      if (data.resultCode === 0) {
+        let { id, email, login } = data.data;
         this.props.setUsersData(id, email, login);
       }
     });

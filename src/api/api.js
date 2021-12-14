@@ -15,13 +15,13 @@ export const getUsers = (currentPage, pageSize) => {
 };
 
 export const postFollow = (id) => {
-  return instance.post(`/follow/${id}`, {});
+  return instance.post(`/follow/${id}`, {}).then((response) => response.data);
 };
 
 export const deleteUnfollow = (id) => {
-  return instance.delete(`follow/${id}`);
+  return instance.delete(`follow/${id}`).then((response) => response.data);
 };
 
 export const getAuth = () => {
-  return instance.get(`auth/me`);
+  return instance.get(`auth/me`).then((response) => response.data);
 };
