@@ -65,12 +65,15 @@ let Users = (props) => {
           <div className={styles.buttonBlock}>
             {u.followed ? (
               <button
-                className={styles.button}
+                disabled={props.followingIsProgress.some((id) => id === u.id)}
+                className={styles.buttonUn}
                 onClick={() => {
+                  props.toggleIsFollowingProgress(true, u.id);
                   deleteUnfollow(u.id).then((data) => {
                     if (data.resultCode === 0) {
                       props.unFollow(u.id);
                     }
+                    props.toggleIsFollowingProgress(false, u.id);
                   });
                 }}
               >
@@ -78,12 +81,15 @@ let Users = (props) => {
               </button>
             ) : (
               <button
-                className={styles.button}
+                disabled={props.followingIsProgress.some((id) => id === u.id)}
+                className={styles.buttonF}
                 onClick={() => {
+                  props.toggleIsFollowingProgress(true, u.id);
                   postFollow(u.id).then((data) => {
                     if (data.resultCode === 0) {
                       props.follow(u.id);
                     }
+                    props.toggleIsFollowingProgress(false, u.id);
                   });
                 }}
               >

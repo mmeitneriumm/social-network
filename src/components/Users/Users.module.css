@@ -51,13 +51,20 @@
   justify-content: end;
   align-items: center;
 }
+.buttonUn {
+  background-color: white !important;
+  border: 2px solid #4caf50 !important;
+  color: #4caf50 !important;
+}
 
+.buttonF,
+.buttonUn,
 .button {
   background-color: #4caf50;
+  color: white;
   height: 40px;
   border: none;
   border-radius: 30px;
-  color: white;
   font-weight: 700;
   margin: 10px;
   padding: 10px;
@@ -66,7 +73,8 @@
   font-size: 16px;
   transition-duration: 0.4s;
 }
-.button:hover {
+.buttonF:hover,
+.buttonUn:hover {
   box-shadow: 0 12px 16px 0 rgba(21, 255, 0, 0.623),
     0 17px 50px 0 rgb(214, 211, 0);
   background-color: yellowgreen;
