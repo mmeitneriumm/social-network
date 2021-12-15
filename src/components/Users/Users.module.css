@@ -59,7 +59,7 @@
 
 .buttonF,
 .buttonUn,
-.button {
+.buttonPag {
   background-color: #4caf50;
   color: white;
   height: 40px;
@@ -74,7 +74,8 @@
   transition-duration: 0.4s;
 }
 .buttonF:hover,
-.buttonUn:hover {
+.buttonUn:hover,
+.buttonPag:hover {
   box-shadow: 0 12px 16px 0 rgba(21, 255, 0, 0.623),
     0 17px 50px 0 rgb(214, 211, 0);
   background-color: yellowgreen;

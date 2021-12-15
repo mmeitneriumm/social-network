@@ -25,3 +25,7 @@ export const deleteUnfollow = (id) => {
 export const getAuth = () => {
   return instance.get(`auth/me`).then((response) => response.data);
 };
+
+export const getProfile = (id) => {
+  return instance.get(`profile/${id}`).then((response) => response.data);
+};

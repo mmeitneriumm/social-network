@@ -1,4 +1,5 @@
 import styles from "./ProfileInfo.module.css";
+import user from "./../../img/user.jpg";
 
 const ProfileInfo = (props) => {
   return (
@@ -14,7 +15,7 @@ const ProfileInfo = (props) => {
         <p>mainLink: {props.profile.contacts.mainLink}</p>
       </div>
       <div className={styles.profileInfo_description}>
-        <img src={props.profile.photos.large} alt="" />
+        <img src={props.photos != null ? props.photos : user} alt="ava" />
         <p className={styles.name}>{props.profile.fullName}</p>
         <p className={styles.skill}>{props.profile.aboutMe}</p>
       </div>
