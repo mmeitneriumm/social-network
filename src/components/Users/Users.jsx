@@ -68,13 +68,7 @@ let Users = (props) => {
                 disabled={props.followingIsProgress.some((id) => id === u.id)}
                 className={styles.buttonUn}
                 onClick={() => {
-                  props.toggleIsFollowingProgress(true, u.id);
-                  deleteUnfollow(u.id).then((data) => {
-                    if (data.resultCode === 0) {
-                      props.unFollow(u.id);
-                    }
-                    props.toggleIsFollowingProgress(false, u.id);
-                  });
+                  props.unfollowThunk(u.id);
                 }}
               >
                 Unfollow
@@ -84,13 +78,7 @@ let Users = (props) => {
                 disabled={props.followingIsProgress.some((id) => id === u.id)}
                 className={styles.buttonF}
                 onClick={() => {
-                  props.toggleIsFollowingProgress(true, u.id);
-                  postFollow(u.id).then((data) => {
-                    if (data.resultCode === 0) {
-                      props.follow(u.id);
-                    }
-                    props.toggleIsFollowingProgress(false, u.id);
-                  });
+                  props.followThunk(u.id);
                 }}
               >
                 {" "}

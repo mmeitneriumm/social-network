@@ -1,4 +1,4 @@
-import {getUsers} from "../api/api"
+import {getUsers, postFollow, deleteUnfollow} from "../api/api"
 
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
@@ -130,6 +130,30 @@ export const getUsersThunkCreator = (currentPage, pageSize) => {
       dispatch(setUsers(data.items));
       dispatch(setUsersTotalCount(data.totalCount));
     });
+  }
+}
+
+export const followThunk = (userId) => {
+  return (dispatch) => {
+    dispatch(toggleIsFollowingProgress(true, userId));
+    postFollow(userId).then((data) => {
+      if (data.resultCode === 0) {
+        dispatch(follow(userId));
+      }
+        dispatch(toggleIsFollowingProgress(false, userId));
+      });
+  }
+}
+
+export const unfollowThunk = (userId) => {
+  return (dispatch) => {
+    dispatch(toggleIsFollowingProgress(true, userId));
+    deleteUnfollow(userId).then((data) => {
+      if (data.resultCode === 0) {
+        dispatch(unFollow(userId))
+      } 
+      dispatch(toggleIsFollowingProgress(false, userId));
+      });
   }
 }
 
