@@ -1,3 +1,5 @@
+import { getProfile} from "../api/api"
+
 let ADD_POST = "ADD-POST";
 let UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 let SET_USERS_PROFILE = "SET-USERS-PROFILE";
@@ -63,3 +65,11 @@ export const setUsersProfile = (profile) => {
     profile,
   };
 };
+
+export const getProfileThunk = (userId) => {
+  return (dispatch) => {
+    getProfile(userId).then((data) => {
+      dispatch(setUsersProfile(data));
+    });
+  }
+}
